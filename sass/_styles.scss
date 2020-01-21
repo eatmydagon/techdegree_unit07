@@ -1,0 +1,179 @@
+
+
+/* ==========================================================
+============================ STYLES ============================
+===========================================================*/
+
+/* ======================== Typography ========================*/
+
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 1px;
+}
+
+header {
+  color: $text_1;
+  & .app_name {
+    font-size: 1.5rem;
+  }
+  & .profile_name {
+    font-size: 1rem;
+  }
+}
+
+body,
+input::placeholder,
+textarea::placeholder,
+.search i {
+  color: $text_3;
+}
+
+.traffic {
+  & li {
+    font-weight: bold;
+  }
+}
+
+.social_stats > div {
+  & h3 {
+    color: $primary_color;
+  }
+  & p {
+    font-size: 2rem;
+    color: $text_2;
+  }
+}
+
+
+/* ======================== HEADER ========================*/
+
+header {
+  background-color: $primary_color;
+}
+
+.notification_icon {
+  & svg {
+    opacity: 0.6;
+    transition: all .3s ease-out;
+  }
+  & img {
+    transition: transform .3s ease-out;
+  }
+  &:hover {
+    cursor: pointer;
+    & svg {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    & img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.notification_container {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.notification_item {
+  background-color: $primary_color;
+  & button {
+    color: white;
+    background-color: transparent;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+
+/* ======================== NAV ========================*/
+
+nav {
+  background-color: $secondary_color;
+}
+
+.nav_icon {
+  opacity: 0.6;
+  transition: opacity .5s ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+/* ======================== MAIN ========================*/
+
+.search {
+  & button {
+    background-color: transparent;
+  }
+}
+
+.alert_message {
+  background-color: $primary_color;
+  color: $text_1;
+  & button {
+    color: $text_1;
+    background-color: transparent;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.traffic_nav {
+  list-style: none;
+  & li {
+   &:hover {
+    cursor: pointer;
+   }
+  }
+  & .selection {
+    background-color: $select_color;
+    color: white;
+  }
+}
+
+.social_stats {
+  & > div {
+    background-color: $social_bg_color;
+  }
+  & .icon {
+    background-color: $primary_color;
+    & svg {
+      fill: white;
+    }
+  }
+}
+
+input,
+textarea {
+  &:focus {
+    outline: none;
+  }
+}
+
+.autocomplete {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.search_item {
+  &:hover {
+    background-color: $primary_color;
+    cursor: pointer;
+    color: white;
+  }
+}
+
+.settings,
+.message_user {
+  & button {
+    background-color: $primary_color;
+    color: white;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+

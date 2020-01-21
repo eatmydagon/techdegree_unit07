@@ -1,0 +1,74 @@
+
+// toggle switch
+
+
+
+
+.switch {
+    margin: 0 $gutter_s;
+    display: inline-block;
+    height: 30px;
+    width: 80px;
+    position: relative;
+    & input {
+      display: none;
+    }
+    & .overlay:hover {
+      cursor: pointer;
+    }
+    & .overlay {
+      border: 1px solid grey;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      top: 0;
+      left: 0;
+      border-radius: 50px;
+    }
+    & .toggle {
+      position: absolute;
+      top: .5px;
+      left: 2px;
+      display: block;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background-color: white;
+      border: 1px solid grey;
+      transition: transform .2s ease-in;
+      z-index: 100;
+
+    }
+    & .offbtn {
+      font-weight: bold;
+      position: absolute;
+      right: 7px;
+      top:5px;
+    }
+    & .onbtn {
+      display: none;
+      color: white;
+      font-weight: bold;
+      position: absolute;
+      left: 7px;
+      top:5px;
+    }
+    & input:checked  {
+      & + .overlay {
+        background-color: $primary_color;
+      }
+      & + .overlay {
+        & .toggle {
+          transform: translateX(50px);
+        }
+        & .onbtn {
+          display: initial;
+        }
+        & .offbtn {
+          display: none;
+        }
+      }
+    }
+
+  }

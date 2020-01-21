@@ -1,0 +1,54 @@
+
+$primary_color: rgb(116, 119 ,191);
+$secondary_color: rgb(77, 75, 114);
+$select_color: rgb(129, 201, 143);
+$social_bg_color: rgba(194, 201, 207, 0.3);
+
+$text_1: white;
+$text_2:  black;
+$text_3: rgba(97, 102, 105, 0.8);
+
+$gutter_s: 10px;
+$gutter_m: 20px;
+$gutter_l: 30px;
+
+$border_main: 1px solid rgba(145,130,145,0.5);
+
+
+@mixin flex_styles( $display: flex,
+                    $flex_direction: null,
+                    $align_items: null,
+                    $justify_content: null,
+                    $flex_wrap: null,
+) { display: $display;
+    flex-direction: $flex_direction;
+    align-items: $align_items;
+    justify-content: $justify_content;
+    flex-wrap: $flex_wrap;
+}
+
+@mixin display_picture {
+  border-radius: 50%;
+  height: 50px;
+}
+
+$break: (
+  "m": 768px,
+  "l": 1024,
+);
+
+@mixin media($width) {
+  $value: map-get($break, $width);
+  
+  @if $width == "m" {
+    @media only screen and (min-width: $value) {
+      @content;
+    }
+  } @else if $width == "l" {
+    @media only screen and (min-width: $value) {
+      @content;
+    }
+  }
+
+}
+
